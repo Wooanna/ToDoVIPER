@@ -1,0 +1,6 @@
+framework module Pods_ToDoVIPER {
+  umbrella header "Pods-ToDoVIPER-umbrella.h"
+
+  export *
+  module * { export * }
+}

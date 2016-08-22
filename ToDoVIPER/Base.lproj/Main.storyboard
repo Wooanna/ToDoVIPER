@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToDoVIPER" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sm2-b6-UJV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="ADD TASK">
+                                    <color key="titleColor" red="0.16942608260765687" green="0.46598903795811519" blue="0.43172028799064105" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7Ax-Qz-pD4" kind="show" identifier="showAddTaskController" id="h7n-go-dC3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="sm2-b6-UJV" secondAttribute="trailing" id="9oR-Zb-fQv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sm2-b6-UJV" secondAttribute="bottom" constant="20" id="UMj-V0-CqL"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="sm2-b6-UJV" secondAttribute="leading" id="x4a-u4-FlT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="sm2-b6-UJV"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="UMj-V0-CqL"/>
+                                <exclude reference="9oR-Zb-fQv"/>
+                                <exclude reference="x4a-u4-FlT"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="sm2-b6-UJV"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="UMj-V0-CqL"/>
+                                <include reference="9oR-Zb-fQv"/>
+                                <include reference="x4a-u4-FlT"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="addTaskBtn" destination="sm2-b6-UJV" id="ZsB-Rf-Evo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="528" y="407.25"/>
+        </scene>
+        <!--Add Task View Controller-->
+        <scene sceneID="s0C-N3-JWU">
+            <objects>
+                <viewController id="7Ax-Qz-pD4" customClass="AddTaskViewController" customModule="ToDoVIPER" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Vo-Sa-gs1"/>
+                        <viewControllerLayoutGuide type="bottom" id="d7j-wd-gU9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qx4-Ec-UTj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UlD-C0-k6y">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axj-Vq-vc2">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="ADD">
+                                    <color key="titleColor" red="0.16877916273989887" green="0.46420975130890052" blue="0.43007184976131535" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="UlD-C0-k6y" secondAttribute="leading" id="5dI-G6-cXv"/>
+                            <constraint firstItem="d7j-wd-gU9" firstAttribute="top" secondItem="Axj-Vq-vc2" secondAttribute="bottom" constant="20" id="7Bd-jP-Q8H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UlD-C0-k6y" secondAttribute="trailing" id="7Dh-PD-bXC"/>
+                            <constraint firstItem="Axj-Vq-vc2" firstAttribute="centerX" secondItem="qx4-Ec-UTj" secondAttribute="centerX" id="G3L-oR-coC"/>
+                            <constraint firstItem="UlD-C0-k6y" firstAttribute="top" secondItem="0Vo-Sa-gs1" secondAttribute="bottom" constant="45" id="Mm5-eI-SZU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="UlD-C0-k6y"/>
+                                <exclude reference="Axj-Vq-vc2"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="7Bd-jP-Q8H"/>
+                                <exclude reference="5dI-G6-cXv"/>
+                                <exclude reference="7Dh-PD-bXC"/>
+                                <exclude reference="Mm5-eI-SZU"/>
+                                <exclude reference="G3L-oR-coC"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="UlD-C0-k6y"/>
+                                <include reference="Axj-Vq-vc2"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="7Bd-jP-Q8H"/>
+                                <include reference="5dI-G6-cXv"/>
+                                <include reference="7Dh-PD-bXC"/>
+                                <include reference="Mm5-eI-SZU"/>
+                                <include reference="G3L-oR-coC"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="addBtn" destination="Axj-Vq-vc2" id="a7H-9l-nKE"/>
+                        <outlet property="textField" destination="UlD-C0-k6y" id="QzE-mn-leh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0L4-b5-3GS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1257" y="407.25"/>
+        </scene>
+    </scenes>
+</document>
